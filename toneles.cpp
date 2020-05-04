@@ -14,6 +14,8 @@ const int INF = 190000000;
 const int MOD = 1e9+7;
  
 int main(){
+	//La idea es esencialmente crear grupos de tamaño lo más cercano posible a la capacidad, pero hay que tener en cuenta cuántos grupos
+	//ya se formaron.
 	ifstream cin("toneles.in");
 	ofstream cout("toneles.out");
 	int cap; cin >> cap;
