@@ -5,6 +5,9 @@
 //obtener mínimo o máximo
 //Ver https://codeforces.com/blog/entry/58316 para referencia
 //Este código es la solución de este problema: https://codeforces.com/contest/923/problem/B
+//Descubierto en el TC Argentina 2020
+//24/7/2020
+//OWO
 
 #include <bits/stdc++.h> 	
  	
