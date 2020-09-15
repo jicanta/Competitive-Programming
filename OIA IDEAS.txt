@@ -1,0 +1,102 @@
+Dado un string, le concatenás un signo $ al final.
+Ej: hola -> hola$
+Luego, creas todos los cyclic shifts
+hola$
+ola$h
+la$ho
+a$hol
+$hola
+Los ordenas lexicograficamente (el $ es el menor)
+$hola
+a$hol
+hola$
+la$ho
+ola$h
+Y te creas otra string agarrandote la ultima letra de estas strings:
+En este caso:
+al$oh
+Dada la string final, determinar la inicial.
+Pista:
+Mirar la primer fila de letras de los cyclis shifts y la última, ver el mapeo que se genera.
+(28/4/2020)
+
+///
+
+Mi padre hizo una promesa, con mucha belleza mas no destreza. No pudo con su pereza, y no dejó de tirarse en esa mesa.
+
+///
+Dada una grilla de tamaño n*m (1 <= n, m <= 20) con luces "prendidas" o "apagadas", dar una secuencia de operaciones que hagan que todas las luces se apaguen.
+Una operación consiste en lo siguiente: miro mis casillas adyacentes (incluyéndome a mí), y hago la operacion tablero[i][j] = tablero[i][j] xor 1. I.e. si estoy 
+prendida me apago, y si estoy apagada me prendo.
+Ejemplo:
+Tablero inicial:
+0 1 1 0 1 0
+1 0 0 1 1 1
+0 0 1 0 0 1
+1 0 0 1 0 1
+0 1 1 1 0 0
+Operaciones:
+1 0 1 0 0 1
+1 1 0 1 0 1
+0 0 1 0 1 1
+1 0 0 1 0 0
+0 1 0 0 0 0
+
+SOLUCION:
+Para cada fila (excepto la última), me fijo que luces están prendidas.
+Si tablero[i][j] = 1, "pulso" el boton (i+1, j), así apago este uno.
+De esta forma, luego de a lo sumo n pulsaciones la fila 1 está totalmente apagada.
+Al realizar esto en las n filas, solo nos queda la última fila con posiblemente algunas luces prendidas.
+En el ejemplo de arriba nos queda:
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 1 1 1 0 1
+
+Luego, vamos a ver las 2^m formas de prender una lámpara en la primer fila.
+No solo la prendemos, aplicamos la operación.
+Lema: hay al menos una de estas configuraciones que permite que, si volvemos a aplicar
+las operaciones de prender los de abajo para apagar los de arriba, apaguemos todas las luces.
+Demo: no tengo idea
+
+Código: en mi github! (algo de las luces)
+(10/8/2020)
+
+///
+
+Dadas dos strings ambas de tamaño menor a 1e5, dar el menor (lexicográfico) anagrama de A de tal forma que B aparezca al menos una vez como
+substring.
+
+SOLUCION:
+Crear un arreglo freq de tamaño 26 que diga cuántas veces aparece cada caracter en A.
+Luego, por cada caracter de B le restamos 1 a la posicion correspondiente.
+Recorremos las letras de la 'a' a la 'z'.
+Ponemos esa letra la cantidad de veces que tenemos en freq.
+Luego, el caso especial es cuando el caracter actual es igual a la primer letra de B.
+Si eso pasa, vemos si conviene más poner la string y luego seguir o poner las letras y luego la string.
+Código: en mi github! (buscando anagramas)
+
+///
+
+Problema interactivo! (Probablemente nivel selectivo, bastante geniosity 300iq la idea)
+Hay un grafo ponderado escondido con n <= 100 nodos y cuyas aristas tienen peso w <= 100 (el peso no importa en realidad iirc)
+Tu objetivo es encontrar el diametro del grafo i.e. la máxima distancia entre dos nodos de este.
+Podes hacerle estas preguntas a la interaccion:
+Dados dos conjuntos A y B, responde la maxima distancia de un nodo que pertenece a A a un nodo que pertenece a B.
+Podes hacer hasta 7 (!) queries.
+
+SOLUCION:
+Sean a y b los extremos del diámetro.
+Si en una query hacemos que a y b estén en distintos conuntos, ganamos.
+Ahora bien, queremos ver alguna forma de partir los nodos de tal forma que nos aseguramos de que 
+para todo par de nodos (i, j) en al menos una particion estos estan en distintos conjuntos.
+Ahora viene la magia:
+Para hacer esto hay que ver la representación en binaria de los nodos.
+En la i-ésima pregunta, vemos el conjunto de nodos que tienen el i-ésimo bit encendido.
+Como todos los pares de nodos difieren en al menos un bit, y vemos los 7=log2(100) bits, estamos.
+
+Otro problema interesante es esto mismo pero si el grafo es un árbol. Aqui podemos usar otra solucion que no usa la magia de los bits, sino
+que es una implementacion directa del conocido algoritmo p encontrar diametros.
+
+
