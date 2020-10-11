@@ -15,4 +15,5 @@ pero hay veces que te dan pares de números y medio que no entendés nada, pero 
 -A veces las cotas hablan por sí mismas. Si tenés n<=20, eso grita dp bitmask.
 -BUSCÁ CASOS BORDES
 -La posta de rerooting trick: si hago una dp con el nodo raíz, y es fácil pasarle esta dp a un hijo mío. Ej:https://codeforces.com/contest/1324/problem/F, https://codeforces.com/contest/1187/problem/E
--Siempre que pienses que es una dp del estilo "exchange aruments", PROBÁ SORTEAR DE TODAS LAS MANERAS!
+-Siempre que pienses que es una dp del estilo "exchange aruments", PROBÁ SORTEAR DE TODAS LAS MANERAS! Muchas veces esto es trivial, como en http://juez.oia.unsam.edu.ar/#/task/negocios/statement, pero otras veces no tanto, como en https://omegaup.com/arena/problem/ciic2020-codefoxes/#problems.
+
