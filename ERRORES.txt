@@ -21,3 +21,4 @@ pero hay veces que te dan pares de números y medio que no entendés nada, pero 
 Tip de este video pro: https://www.youtube.com/watch?v=48NtGlHJ4gE&ab_channel=luisenriquevargasazcona
 Los estados son el conjunto de todas las restricciones previamente impuestas o el conjunto de la información relevante luego de tomar algunas decisiones.
 -Multiplicar por 1LL para evitar overflow.
+-PRESTÁ ATENCIÓN A LAS COTAS.
