@@ -20,3 +20,4 @@ pero hay veces que te dan pares de números y medio que no entendés nada, pero 
 -En problemas de DP, pensar bien cuál es el estado. Tené en cuenta las restricciones y el profit.
 Tip de este video pro: https://www.youtube.com/watch?v=48NtGlHJ4gE&ab_channel=luisenriquevargasazcona
 Los estados son el conjunto de todas las restricciones previamente impuestas o el conjunto de la información relevante luego de tomar algunas decisiones.
+-Multiplicar por 1LL para evitar overflow.
