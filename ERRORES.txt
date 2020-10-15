@@ -17,3 +17,4 @@ pero hay veces que te dan pares de números y medio que no entendés nada, pero 
 -La posta de rerooting trick: si hago una dp con el nodo raíz, y es fácil pasarle esta dp a un hijo mío. Ej:https://codeforces.com/contest/1324/problem/F, https://codeforces.com/contest/1187/problem/E
 -Siempre que pienses que es una dp del estilo "exchange aruments", PROBÁ SORTEAR DE TODAS LAS MANERAS! Muchas veces esto es trivial, como en http://juez.oia.unsam.edu.ar/#/task/negocios/statement, pero otras veces no tanto, como en https://omegaup.com/arena/problem/ciic2020-codefoxes/#problems.
 -Si da RTE, fijate bien el tamaño de vector y no estar accediendo a posiciones más grandes. Ej: https://codeforces.com/contest/431/problem/C
+-En problemas de DP, pensar bien cuál es el estado. Tené en cuenta las restricciones y el profit.
