@@ -22,3 +22,6 @@ Tip de este video pro: https://www.youtube.com/watch?v=48NtGlHJ4gE&ab_channel=lu
 Los estados son el conjunto de todas las restricciones previamente impuestas o el conjunto de la información relevante luego de tomar algunas decisiones.
 -Multiplicar por 1LL para evitar overflow.
 -PRESTÁ ATENCIÓN A LAS COTAS.
+-En problemas greedy que ordenes por algún criterio, pensá bien qué criterio es el que más te conviene para ordenar! Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=787
+Vos sorteabas por compro*precio, pero era solo por precio.
+
