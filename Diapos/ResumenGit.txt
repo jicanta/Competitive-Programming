@@ -1,0 +1,29 @@
+Workspace and repository
+Initialize the working directory: git init
+add files to the staging area (stage) : git add file.txt
+view the current staging area status: git status
+cancel the staging (that is, cancel add): git reset HEAD
+cancel the staging of a file: git reset HEAD file.txt
+submit all the changes in the current staging area : git commit -m "备注信息"
+view the changes content:git diff file.txt
+
+Version rollback
+View commit history: git log
+View all the command history: git reflog
+roll back a version: git reset --hard ae77e84（版本号）, git reset --hard HEAD^（有几个^就是往回退几个版本）
+abandon the changes, back to the repository the latest version (the most recent commit or add state):git checkout -- file.txt
+
+Remote warehouse
+Associated with a remote library: git remote add origin git@server-name:path/repo-name.git
+the association for the first time the local master submit to a remote repository: git push -u origin master( -uassociating local master and remote master them)
+directly after use git push origin mastercan be
+cloned:git clone git@server-name:path/repo-name.git
+
+Branch management
+View branch: git branch
+create branch: git branch <name>
+delete branch: git branch -d <name>
+switch to branch: git checkout <name>
+create and switch to new branch: git checkout -b <name>
+merge a branch <name>to current branch: git merge <name>
+view branch diagram:git log --graph
