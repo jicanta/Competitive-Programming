@@ -25,3 +25,4 @@ Los estados son el conjunto de todas las restricciones previamente impuestas o e
 -En problemas greedy que ordenes por algún criterio, pensá bien qué criterio es el que más te conviene para ordenar! Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=787
 Vos sorteabas por compro*precio, pero era solo por precio.
 -En problemas tipo constructivos, pensasr si no hay una forma sistemática de resolverlo! Ej: https://codeforces.com/contest/1421/problem/C
+-Si tu solución/el problema es casoso, pensar bien cada caso por separado y cómo podría llegar a darse ese caso. Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=763
