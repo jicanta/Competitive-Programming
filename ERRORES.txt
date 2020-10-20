@@ -26,3 +26,5 @@ Los estados son el conjunto de todas las restricciones previamente impuestas o e
 Vos sorteabas por compro*precio, pero era solo por precio.
 -En problemas tipo constructivos, pensasr si no hay una forma sistemática de resolverlo! Ej: https://codeforces.com/contest/1421/problem/C
 -Si tu solución/el problema es casoso, pensar bien cada caso por separado y cómo podría llegar a darse ese caso. Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=763
+-Si necesitas calcular APSP (all pairs shortest path) pero no se puede usar flory marsall, usá dijsktra! Ej: https://codeforces.com/contest/1433/problem/G
+Además, fijate que si elegis que la arista a la que le ponés 0 es u-v, el camino de a-b es el mejor entre el camino de a-b, a-u+v-b, a-v+u-b.
