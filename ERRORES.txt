@@ -29,3 +29,6 @@ Vos sorteabas por compro*precio, pero era solo por precio.
 -Si necesitas calcular APSP (all pairs shortest path) pero no se puede usar flory marsall, usá dijsktra! Ej: https://codeforces.com/contest/1433/problem/G
 Además, fijate que si elegis que la arista a la que le ponés 0 es u-v, el camino de a-b es el mejor entre el camino de a-b, a-u+v-b, a-v+u-b.
 -En problemas en los que haya que usar divisores, pensarlo al revés. Es decir, es más eficiente calcular los múltiplos de un número que sus divisores. Ej: https://oj.uz/problem/view/COCI17_savrsen
+-Probá ver os números en otra base. Ej:https://oj.uz/problem/view/COCI16_tavan
+Si vemos a X en base K, vemos que el i-esimo digito corresponde al i-esimo caracter que la minimiza.
+
