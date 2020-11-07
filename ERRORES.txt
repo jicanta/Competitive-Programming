@@ -31,4 +31,5 @@ Además, fijate que si elegis que la arista a la que le ponés 0 es u-v, el cami
 -En problemas en los que haya que usar divisores, pensarlo al revés. Es decir, es más eficiente calcular los múltiplos de un número que sus divisores. Ej: https://oj.uz/problem/view/COCI17_savrsen
 -Probá ver os números en otra base. Ej:https://oj.uz/problem/view/COCI16_tavan
 Si vemos a X en base K, vemos que el i-esimo digito corresponde al i-esimo caracter que la minimiza.
+-En problemas con pinta greedy, ver que cosa NUNCA conviene hacer. Eso va a reducir casos, y tal vez es la solución. Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=810
 
