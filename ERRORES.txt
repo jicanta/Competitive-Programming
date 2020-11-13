@@ -34,3 +34,4 @@ Si vemos a X en base K, vemos que el i-esimo digito corresponde al i-esimo carac
 -En problemas con pinta greedy, ver que cosa NUNCA conviene hacer. Eso va a reducir casos, y tal vez es la solución. Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=810
 -En problemas en los que haya operaciones tipo "togglea una submatriz, etc" fijate si hay elementos que solo pueden cambiar de una forma. Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=689
 -En problemas de teoría de números, siempre pensar en la factorización en primos de los número o el máximo cmún divisor. Ej: https://codeforces.com/contest/1062/problem/B
+-Acordate que a xor a = 0! Ej: https://codeforces.com/contest/1438/problem/D
