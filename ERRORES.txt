@@ -36,3 +36,4 @@ Si vemos a X en base K, vemos que el i-esimo digito corresponde al i-esimo carac
 -En problemas de teoría de números, siempre pensar en la factorización en primos de los número o el máximo cmún divisor. Ej: https://codeforces.com/contest/1062/problem/B
 -Acordate que a xor a = 0! Ej: https://codeforces.com/contest/1438/problem/D
 -En problemas de tableros, siempre considerá pintarlo como tablero de ajedrez!! Ej: https://codeforces.com/contest/1438/problem/C
+-Siempre pensá en fibonacci! Ej: https://codeforces.com/contest/1452/problem/D
