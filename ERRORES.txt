@@ -41,3 +41,4 @@ Si vemos a X en base K, vemos que el i-esimo digito corresponde al i-esimo carac
 Podés ver que siempre hay una casilla del camino optimo que no vas a querer cambiar.
 -Si tenes queries de caminos pero el source no cambia CON SOLO 1 DIJKSTRA/LO Q SEA es suficiente.
 -Si tenes n aristas y n nodos, el grafo es un ciclo del que cuelgan árboles. Ej: https://codeforces.com/contest/1454/problem/E
+-Si queres hacer un chequeo del estilo a <= b/2 escribilo como 2*a <= b.
