@@ -42,3 +42,5 @@ Podés ver que siempre hay una casilla del camino optimo que no vas a querer cam
 -Si tenes queries de caminos pero el source no cambia CON SOLO 1 DIJKSTRA/LO Q SEA es suficiente.
 -Si tenes n aristas y n nodos, el grafo es un ciclo del que cuelgan árboles. Ej: https://codeforces.com/contest/1454/problem/E
 -Si queres hacer un chequeo del estilo a <= b/2 escribilo como 2*a <= b.
+-Si tenés alguna cuenta/fórmula reescribila hasta que salga algo bueno. Ej: https://codeforces.com/problemset/problem/862/E
+-Fijate que ventaja te podría dar procesar los objetos en cierto orden. Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=813
