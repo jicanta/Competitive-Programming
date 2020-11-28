@@ -62,6 +62,7 @@ int main(){
 	//la respuesta es la maxima cantidad de intervalos
 	//totalmente contenidos dentro de otro
 	//No sé cuando no se puede qaq
+	//Edit: no se puede cuando se intersecan y no estan totalmente contenidos
 	int n; cin >> n;
 	vi a (n);
 	forn(i, n) cin >> a[i];
