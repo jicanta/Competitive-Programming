@@ -49,3 +49,4 @@ Podés ver que siempre hay una casilla del camino optimo que no vas a querer cam
 -Chequeá que estés construyendo bien la suma de prefijos. Ej: https://codeforces.com/contest/1117/problem/C
 Vos hacias if(...) S[i] = S[i-1]+k
 Cuando deberia ser S[i] = S[i-1] if(...) S[i] += k
+-Si tenés swaps/reverses, pensá en la paridad de la permutación, es decir, la paridad del número de inversiones. Ej: https://codeforces.com/problemset/problem/1256/F, https://omaforos.com.ar/viewtopic.php?f=5&t=1787
