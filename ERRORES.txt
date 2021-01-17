@@ -52,3 +52,5 @@ Cuando deberia ser S[i] = S[i-1] if(...) S[i] += k
 -Si tenés swaps/reverses, pensá en la paridad de la permutación, es decir, la paridad del número de inversiones. Ej: https://codeforces.com/problemset/problem/1256/F, https://omaforos.com.ar/viewtopic.php?f=5&t=1787
 -Si se cuelga localmente y hay un dfs, probá hacerlo iterativo. Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=596
 -Si tenés operaciones en un prefijo, considerá empezar desde atrás, para una operación no te arruine las anteriores. Ej: https://codeforces.com/contest/1381/problem/A2
+-Probar pintar como en ajedrez, partiendo en subtableros de 2x2, etc. Ej: https://codeforces.com/problemset/problem/763/B
+-Probar primero comenzar con algo grande e ir achicandolo y viceversa. Ej: https://codeforces.com/contest/761/problem/E
