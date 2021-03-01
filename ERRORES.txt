@@ -54,3 +54,4 @@ Cuando deberia ser S[i] = S[i-1] if(...) S[i] += k
 -Si tenés operaciones en un prefijo, considerá empezar desde atrás, para una operación no te arruine las anteriores. Ej: https://codeforces.com/contest/1381/problem/A2
 -Probar pintar como en ajedrez, partiendo en subtableros de 2x2, etc. Ej: https://codeforces.com/problemset/problem/763/B
 -Probar primero comenzar con algo grande e ir achicandolo y viceversa. Ej: https://codeforces.com/contest/761/problem/E
+-Para mapear celdas a numeros es M*i+j, NO N*i+j!! Ej: https://csacademy.com/contest/archive/task/mountain-time/statement/
