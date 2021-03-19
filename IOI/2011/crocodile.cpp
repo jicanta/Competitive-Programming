@@ -79,6 +79,14 @@ priority_queue<pi, vpi, greater<pi>> q;
 
 int travel_plan(int N, int M, int R[][2], int L[], int K, int P[])
 {
+	// la idea es básicamente esta:
+	// supongamos que estamos parados en un nodo u
+	// sean v1, v2, ... sus vecinos
+	// sea D(i) el minimo tiempo que le lleva al nodo i ir a una salida
+	// Vamos a hacer un dijkstra comun, en el que D(u) = min(D(u), D(vi)+wi)
+	// sin embargo, en el peor caso, el cocodrilo nos cierra esta arista
+	// por lo que debemos acceder al segundo mejor costo.
+	// es por esto que para cada nodo guardamos la segunda mejor distancia a este nodo
 	F0R(i, M){
 		int u = R[i][0], v = R[i][1], w = L[i];
 		adj[u].pb(mp(v, w)); adj[v].pb(mp(u, w));
