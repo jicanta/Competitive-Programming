@@ -55,3 +55,4 @@ Cuando deberia ser S[i] = S[i-1] if(...) S[i] += k
 -Probar pintar como en ajedrez, partiendo en subtableros de 2x2, etc. Ej: https://codeforces.com/problemset/problem/763/B
 -Probar primero comenzar con algo grande e ir achicandolo y viceversa. Ej: https://codeforces.com/contest/761/problem/E
 -Para mapear celdas a numeros es M*i+j, NO N*i+j!! Ej: https://csacademy.com/contest/archive/task/mountain-time/statement/
+-En la busqueda binaria siempre fijate que el high y low esten bien! Por las dudas, ponele un numero muy grande. Ej: perdiste como 30 mins con este problema https://oj.uz/problem/view/IOI09_mecho por poner high = 2n+5 en vez de n*n+5.
