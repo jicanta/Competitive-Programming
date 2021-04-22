@@ -85,6 +85,7 @@ void NACHO(string name = ""){
 // lo que tenemos que hacer es ver que para cada peso x,
 // solo nos interesa ver los W/x items con mayor valor (ya que no puedo meter mas de W/x en la bolsa de capacidad W).
 // Como los pesos van hasta 2000, la cantidad de items es a lo sumo 2000/1+2000/2+2000/3+2000/4...=17000 aprox.
+// nota tecnica: esto es pq la integral de n/x es n log(x)
 // Esto ya da 100.
  
 struct Item{
