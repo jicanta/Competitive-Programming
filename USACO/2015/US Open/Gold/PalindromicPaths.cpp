@@ -107,6 +107,7 @@ int main(){
 	// al saber (a, r1, r2) podemos determinar c1 y c2.
 	// c1 = n-a-r1
 	// c2 = c1+(2*a+1-(r2-r1+1))
+	// las transiciones salen viendo casos a mano.
 	int n; cin >> n;
 	F0R(i, n) cin >> ta[i];
 	F0R(i, n){
