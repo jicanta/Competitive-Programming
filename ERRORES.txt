@@ -59,3 +59,5 @@ Cuando deberia ser S[i] = S[i-1] if(...) S[i] += k
 -Si tenes que maximizar/minimizar sum(ai)/sum(bi) siempre pensa en usar busqueda binaria. Ej: http://www.usaco.org/index.php?page=viewproblem2&cpid=839, https://www.hackerrank.com/contests/w31/challenges/spanning-tree-fraction/problem
 -En problemas que involucren al gcd/lcm si nos dan un par (a, b) escribirlo como (Ag, Bg) con g = gcd(a, b) y gcd(A, B) = 1. Esto nos da muchas propiedades, ya que como A y B son coprimos, sin un primo divide a AB tiene que dividir a exactamente uno de A o B. Ej: https://codeforces.com/contest/1499/problem/D
 -Truco piola con segtree para majority element. Ej: https://codeforces.com/problemset/problem/1514/D, https://www.spoj.com/problems/PATULJCI/
+-En problemas que te piden minimzar algo, a veces es mejor pensar como podes maximizar otra cosa para minimzar ese algo. Ej: https://oj.uz/problem/view/LMIO19_triusis
+En lugar de pensarlo como minimizar los que cambias, tenes que pensarlo como maximizar los que no cambias.
