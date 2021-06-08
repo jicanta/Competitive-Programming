@@ -61,3 +61,4 @@ Cuando deberia ser S[i] = S[i-1] if(...) S[i] += k
 -Truco piola con segtree para majority element. Ej: https://codeforces.com/problemset/problem/1514/D, https://www.spoj.com/problems/PATULJCI/
 -En problemas que te piden minimzar algo, a veces es mejor pensar como podes maximizar otra cosa para minimzar ese algo. Ej: https://oj.uz/problem/view/LMIO19_triusis
 En lugar de pensarlo como minimizar los que cambias, tenes que pensarlo como maximizar los que no cambias.
+-En problemas de mediana, pensa que si la mediana es x y reemplazas los elementos menores a x con -1 y los mayores con 1. En un segmento, la mediana es al menos x si la suma de este segmento es positiva. Ej: https://codeforces.com/problemset/problem/1486/D
