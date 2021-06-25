@@ -63,6 +63,7 @@ Cuando deberia ser S[i] = S[i-1] if(...) S[i] += k
 En lugar de pensarlo como minimizar los que cambias, tenes que pensarlo como maximizar los que no cambias.
 -En problemas de mediana, pensa que si la mediana es x y reemplazas los elementos menores a x con -1 y los mayores con 1. En un segmento, la mediana es al menos x si la suma de este segmento es positiva. Ej: https://codeforces.com/problemset/problem/1486/D
 -A veces conviene pensar en términos de profit, en problemas en los que cambies/reversees un subarray. Ej https://codeforces.com/contest/1373/problem/D aca el profit de cambiar dos elementos consecutivos es b-a si estas en posicion par y a-b si estas en posicion impar. Ademas, reversear un subarray de tamaño 2x es como swapear x elementos consecutivos, ya que solo nos interesa la paridad de la posicion.
+-clear funciona en O(n), detsruye los elementos uno por uno.
 
 Tips from Noam:
 I think good tips would be:
