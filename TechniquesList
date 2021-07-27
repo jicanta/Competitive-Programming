@@ -1,0 +1,1 @@
+-Si hay operaciones sobre prefijos, considerar ir de atrás para adelante para que operaciones nuevas no arruinen las anteriores.
