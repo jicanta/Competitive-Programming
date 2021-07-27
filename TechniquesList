@@ -1,1 +1,8 @@
 -Si hay operaciones sobre prefijos, considerar ir de atrás para adelante para que operaciones nuevas no arruinen las anteriores.
+-Mínima cantidad de swaps adyacentes -> contar inversiones con segtree o mergesort.
+-En problemas de mediana, pensar que si la mediana es x en un intervalo y reemplazas los elementos menores a x con -1 y los mayores o iguales a x con +1,
+entonces la suma del intervalo es > 0.
+-Si el espacio de búsqueda es chico, mandale con dfs/bfs.
+-Si tenés que maximizar/minimizar/hacer algo son sum(ai)/sum(bi), pensá en usar búsqueda binaria.
+-Si te piden minimizar algo, pensá en maximizar otra cosa. Se usa mucho en problemas que involucran LIS. Para minimizar la cantidad de cambios,
+es equivalente maximizar la cantidad que no cambias.
