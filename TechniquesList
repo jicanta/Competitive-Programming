@@ -11,3 +11,5 @@ es equivalente maximizar la cantidad que no cambias.
 -En problemas de operaciones/cambios, fijarse qué elementos solo pueden cambiar de una forma.
 -Probar pintar como ajedrez, partir en subtableros de 2x2, pintar con 4 colores, etc.
 -En general, es más fácil calcular múltiplos que divisores, por lo que conviene usar criba.
+-En problemas constructivos, pensar siempre en elegir al siguiente más cerca, más lejos, al que minimice algo, etc.
+-En problemas de bits, el xor nos permite saber qué bits están encendidos, dado que 1^1=0, 0^1=1.
