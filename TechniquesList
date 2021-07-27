@@ -13,3 +13,4 @@ es equivalente maximizar la cantidad que no cambias.
 -En general, es más fácil calcular múltiplos que divisores, por lo que conviene usar criba.
 -En problemas constructivos, pensar siempre en elegir al siguiente más cerca, más lejos, al que minimice algo, etc.
 -En problemas de bits, el xor nos permite saber qué bits están encendidos, dado que 1^1=0, 0^1=1.
+-En problemas de grafos, pensar si el problema en un árbol es más fácil y luego ver cómo trabajar con las back-edges.
