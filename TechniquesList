@@ -15,4 +15,4 @@ es equivalente maximizar la cantidad que no cambias.
 -En problemas de bits, el xor nos permite saber qué bits están encendidos, dado que 1^1=0, 0^1=1.
 -En problemas de grafos, pensar si el problema en un árbol es más fácil y luego ver cómo trabajar con las back-edges.
 -Ver qué números/elementos son candidatos a ser la respuesta/el mínimo/máximo.
--Hashins no solo te permite comparar strings/substrings en O(1), sino tambien compararlas lexicograficamente en O(logn) con binary search.
+-Hashing no solo te permite comparar strings/substrings en O(1), sino tambien compararlas lexicograficamente en O(logn) con binary search.
