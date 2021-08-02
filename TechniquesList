@@ -16,3 +16,7 @@ es equivalente maximizar la cantidad que no cambias.
 -En problemas de grafos, pensar si el problema en un árbol es más fácil y luego ver cómo trabajar con las back-edges.
 -Ver qué números/elementos son candidatos a ser la respuesta/el mínimo/máximo.
 -Hashing no solo te permite comparar strings/substrings en O(1), sino tambien compararlas lexicograficamente en O(logn) con binary search.
+-En problemas de knapsack con cantidades (es decir, no nos dan los elementos explicítamente, sino que nos dicen cuántos hay con ese peso) si tu máxima
+capacidad es W, para cada peso solo hace falta considerar los W/peso objetos con mayor valor. Otro truco es hacer lo siguiente: para cada cantidad,
+vamos creando grupos de tamaño 2^0, 2^1, así hasta que nos pasemos y metemos lo restante en otro grupo. Así, podemos formar todas las sumas de elementos 
+entre 1 y k, y hay logk elementos.
