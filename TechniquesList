@@ -20,3 +20,7 @@ es equivalente maximizar la cantidad que no cambias.
 capacidad es W, para cada peso solo hace falta considerar los W/peso objetos con mayor valor. Otro truco es hacer lo siguiente: para cada cantidad,
 vamos creando grupos de tamaño 2^0, 2^1, así hasta que nos pasemos y metemos lo restante en otro grupo. Así, podemos formar todas las sumas de elementos 
 entre 1 y k, y hay logk elementos.
+-Si tenes que contar secuencias con gcd(a_i)=1, pensá en la función de moebius.
+En particular, sea f(n) la cantidad de secuencias tal que cada elemento es divisible por n.
+Entonces, la cantidad de secuencias en la que los elementos son coprimos es sum(i=1, inf) mu(i)*f(i)
+donde mu(i) es la funcion de moebius.
