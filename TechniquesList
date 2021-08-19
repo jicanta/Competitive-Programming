@@ -7,6 +7,7 @@ entonces la suma del intervalo es > 0.
 -Si te piden minimizar algo, pensá en maximizar otra cosa. Se usa mucho en problemas que involucran LIS. Para minimizar la cantidad de cambios,
 es equivalente maximizar la cantidad que no cambias.
 -Fijarse qué ventaja podría dar ver los elementos en un cierto orden, ya sea de menor a mayor o alguna otra cosa.
+En particular, en problemas de maximos o minimos en caminos en grafos/arboles, podria ser muy util.
 -Fijarse en problemas de juegos/maximizar/minimizar, qué cosas NUNCA conviene hacer/qué cosas no conviene cambiar.
 -En problemas de operaciones/cambios, fijarse qué elementos solo pueden cambiar de una forma.
 -Probar pintar como ajedrez, partir en subtableros de 2x2, pintar con 4 colores, etc.
