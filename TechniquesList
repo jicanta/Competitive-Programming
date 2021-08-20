@@ -25,3 +25,4 @@ entre 1 y k, y hay logk elementos.
 En particular, sea f(n) la cantidad de secuencias tal que cada elemento es divisible por n.
 Entonces, la cantidad de secuencias en la que los elementos son coprimos es sum(i=1, inf) mu(i)*f(i)
 donde mu(i) es la funcion de moebius.
+-Buscar divisores es más fácil y rápido que buscar divisores (criba).
