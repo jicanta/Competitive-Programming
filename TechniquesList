@@ -26,3 +26,5 @@ En particular, sea f(n) la cantidad de secuencias tal que cada elemento es divis
 Entonces, la cantidad de secuencias en la que los elementos son coprimos es sum(i=1, inf) mu(i)*f(i)
 donde mu(i) es la funcion de moebius.
 -Buscar divisores es más fácil y rápido que buscar divisores (criba).
+-Si nos piden encontrar un "candidato", recorre todos y guardate un posible candidato. Vas updateando segun si el actual
+es mejor que el posible candidato. Al final, si hay un candidato, va a ser el que nos quedo como posible.
