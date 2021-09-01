@@ -30,3 +30,4 @@ donde mu(i) es la funcion de moebius.
 es mejor que el posible candidato. Al final, si hay un candidato, va a ser el que nos quedo como posible.
 -Encontrar el k-esimo elemento de un conjunto->binary search
 -Minimizar/maximizar una fracción/promedio->binary search
+-k pasos/movimientos en grafo funcional->binary lifting
