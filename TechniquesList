@@ -31,3 +31,4 @@ es mejor que el posible candidato. Al final, si hay un candidato, va a ser el qu
 -Encontrar el k-esimo elemento de un conjunto->binary search
 -Minimizar/maximizar una fracción/promedio->binary search
 -k pasos/movimientos en grafo funcional->binary lifting
+-Si reverseas un rango de tamaño impar, la paridad de la posicion de un elemento no cambia.
