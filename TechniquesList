@@ -33,3 +33,4 @@ es mejor que el posible candidato. Al final, si hay un candidato, va a ser el qu
 -k pasos/movimientos en grafo funcional->binary lifting
 -Si reverseas un rango de tamaño impar, la paridad de la posicion de un elemento no cambia.
 -floor(floor(a/b)/c)=floor(a/(b*c))
+-trailing zeros = min of #factors of two and #factors of five
