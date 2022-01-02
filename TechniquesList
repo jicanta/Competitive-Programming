@@ -36,3 +36,4 @@ es mejor que el posible candidato. Al final, si hay un candidato, va a ser el qu
 -trailing zeros = min of #factors of two and #factors of five
 -Toda secuencia de largo N tiene una secuencia monotónica de largo al menos sqrt(N)
 -En problemas de intervalos, considerar ordenarlos por extremo derecho creciente.
+-Pensá qué ventajas te podría otorgar ver las queries/cosas al revés.
