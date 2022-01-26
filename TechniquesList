@@ -38,3 +38,4 @@ es mejor que el posible candidato. Al final, si hay un candidato, va a ser el qu
 -Toda secuencia de largo N tiene una secuencia monotónica de largo al menos sqrt(N)
 -En problemas de intervalos, considerar ordenarlos por extremo derecho creciente.
 -Pensá qué ventajas te podría otorgar ver las queries/cosas al revés.
+-En probelmas con módulo (||) pensá que |a-b| podemos escribirlo como c*(a-b), donde c = 1 ó c = -1.
