@@ -34,6 +34,7 @@ es mejor que el posible candidato. Al final, si hay un candidato, va a ser el qu
 -Si reverseas un rango de tamaño impar, la paridad de la posicion de un elemento no cambia.
 -floor(floor(a/b)/c)=floor(a/(b*c))
 -trailing zeros = min of #factors of two and #factors of five
+-En problemas de grafos en los que las aristas tengan colores y "tocar" un nodo cambia el estado de las aristas, pensar en pintar los nodos como grafo bipartito.
 -si tenés que encontrar el k-esimo algo, pensa en pasar de base 10 a otras bases. Se usa en problemas de encontrar el k-esimo string lexicografico etc.
 -Toda secuencia de largo N tiene una secuencia monotónica de largo al menos sqrt(N)
 -En problemas de intervalos, considerar ordenarlos por extremo derecho creciente.
