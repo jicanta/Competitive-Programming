@@ -40,3 +40,4 @@ es mejor que el posible candidato. Al final, si hay un candidato, va a ser el qu
 -En problemas de intervalos, considerar ordenarlos por extremo derecho creciente.
 -Pensá qué ventajas te podría otorgar ver las queries/cosas al revés.
 -En probelmas con módulo (||) pensá que |a-b| podemos escribirlo como c*(a-b), donde c = 1 ó c = -1.
+-Pensá que elementos, que caracteristica hace que algo sea useless (iule).
