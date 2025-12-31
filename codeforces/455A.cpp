@@ -19,12 +19,12 @@ int main() {
 	for(int i = 0; i < n; i++)
 		cin >> a[i], f[a[i]]++;
 		
-	vector<int> maxPoints(MAX_NUM, 0);
+	vector<long long> maxPoints(MAX_NUM, 0);
 	maxPoints[1] = f[1];
 	for(int i = 2; i < MAX_NUM; i++) {
 		maxPoints[i] = maxPoints[i-1];
 		if(i >= 2) 
-			maxPoints[i] = max(maxPoints[i-1], maxPoints[i-2] + f[i] * i);
+			maxPoints[i] = max(maxPoints[i-1], maxPoints[i-2] + (long long)f[i] * i);
 	}
 	cout << maxPoints[MAX_NUM - 1] << '\n';
 	
