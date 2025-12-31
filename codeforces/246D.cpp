@@ -20,14 +20,14 @@ void dfs(int node, const vector<vector<int>>& adj, vector<bool>& vis,
 	}
 }
 
-int getMaxDiversityColor(const vector<vector<int>>& adj, const vector<int>& col, int n) {
+int getMaxDiversityColor(const vector<vector<int>>& adj, 
+						const vector<int>& col, const vector<bool>& validCol, int n) {
 	vector<set<int>> seenCols(MAX_COLS);
 	vector<bool> vis(n, false);
 	for(int i = 0; i < n; i++) if(!vis[i])
 		dfs(i, adj, vis, seenCols, col);
 	int maxSz = -1, maxCol = 0;
-
-	for(int i = 0; i < MAX_COLS; i++) if(int(seenCols[i].size()) > maxSz)
+	for(int i = 0; i < MAX_COLS; i++) if(validCol[i] && int(seenCols[i].size()) > maxSz)
 		maxSz = seenCols[i].size(), maxCol = i;
 	return maxCol;
 }
@@ -41,9 +41,10 @@ int main() {
 	
 	vector<vector<int>> adj(n);
 	vector<int> col(n);
+	vector<bool> validCol(MAX_COLS, false);
 	
 	for(int i = 0; i < n; i++)
-		cin >> col[i];
+		cin >> col[i], validCol[col[i]] = true;
 	
 	for(int i = 0; i < m; i++) {
 		int u, v;
@@ -53,6 +54,6 @@ int main() {
 		adj[v].push_back(u);
 	}
 	
-	cout << getMaxDiversityColor(adj, col, n) << '\n';
+	cout << getMaxDiversityColor(adj, col, validCol, n) << '\n';
 	return 0;
 }
