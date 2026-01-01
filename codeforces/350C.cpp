@@ -44,7 +44,7 @@ int main() {
 	for(int i = 0; i < n; i++)
 		cin >> pos[i].first >> pos[i].second, ret += 2 * ((pos[i].first != 0) + (pos[i].second != 0));
 		
-	sort(begin(pos), end(pos), [&](pair<int, int>& a, pair<int, int>& b) {
+	sort(begin(pos), end(pos), [&](const pair<int, int>& a, const pair<int, int>& b) {
 		return abs(a.first) + abs(a.second) < abs(b.first) + abs(b.second);
 	});
 	cout << ret << '\n';
