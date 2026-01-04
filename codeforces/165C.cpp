@@ -8,6 +8,21 @@
 
 using namespace std;
 
+#define C2(n) (long long) n * (n + 1) / 2
+
+long long solveZero(const string &s, int sz) {
+	long long ret = 0;
+	for(int i = 0; i < sz; i++) if(s[i] == '0') {
+		int j = i;
+		while(j < sz && s[j] == '0') 
+			j++; 
+		ret += C2(j - i);
+		i = j - 1;
+	}
+	return ret;
+		
+}
+
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
@@ -18,6 +33,11 @@ int main() {
 	cin >> s;
 	int n = s.size();
 	long long ret = 0;
+	
+	if(k == 0) {
+		cout << solveZero(s, n) << '\n';
+		return 0;
+	}
 	
 	vector<int> zerosLeft(n, 0), zerosRight(n, 0);
 	for(int i = 1; i < n; i++) {
