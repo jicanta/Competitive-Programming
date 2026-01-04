@@ -8,7 +8,7 @@
 
 using namespace std;
 
-#define C2(n) (long long) n * (n + 1) / 2
+#define GAUSS(n) (long long) (n) * ((n) + 1) / 2
 
 long long solveZero(const string &s, int sz) {
 	long long ret = 0;
@@ -16,11 +16,10 @@ long long solveZero(const string &s, int sz) {
 		int j = i;
 		while(j < sz && s[j] == '0') 
 			j++; 
-		ret += C2(j - i);
+		ret += GAUSS(j - i);
 		i = j - 1;
 	}
 	return ret;
-		
 }
 
 int main() {
@@ -47,16 +46,16 @@ int main() {
 	for(int i = n - 2; i >= 0; i--)
 		if(s[i + 1] == '0') zerosRight[i] = zerosRight[i + 1] + 1;
 		
+	int curOnes = 0;
+	int j = 0;
 	for(int i = 0; i < n; i++) if(s[i] == '1') {
-		int cur = 0;
-		int j = i;
-		while(j < n && cur < k) {
-			cur += s[j] == '1';
+		while(j < n && curOnes < k) {
+			curOnes += s[j] == '1';
 			j++;
 		}
-		if(cur == k) {
+		if(curOnes == k) {
 			ret += (long long)(zerosLeft[i] + 1) * (long long)(zerosRight[j - 1] + 1);
-			i = j - 1;
+			curOnes -= s[i] == '1';
 		}
 	}
 	
