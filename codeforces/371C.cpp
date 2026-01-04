@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int _div(int n, int quan) {
+long long _div(long long n, long long quan) {
 	if(quan == 0)
 		return 1000000000;
 	return n / quan;
@@ -20,16 +20,16 @@ int main() {
 	
 	string s;
 	cin >> s;
-	int quanB = 0, quanS = 0, quanC = 0;
+	long long quanB = 0, quanS = 0, quanC = 0;
 	for(auto ch : s) {
 		if(ch == 'S') quanS++;
 		else if(ch == 'B') quanB++;
 		else quanC++;
 	}
 	
-	int nB, nS, nC;
+	long long nB, nS, nC;
 	cin >> nB >> nS >> nC;
-	int pB, pS, pC;
+	long long pB, pS, pC;
 	cin >> pB >> pS >> pC;
 	long long r;
 	cin >> r;
@@ -39,15 +39,20 @@ int main() {
 	nB -= quan * quanB;
 	nS -= quan * quanS;
 	nC -= quan * quanC;
+		
+	long long low = 0, high = 10000000000000;
 	
-	if((long long)pB * max(0, quanB - nB) + pS * max(0, quanS - nS) + pC * max(0, quanC - nC) <= r) {
-		quan++;
-		r -= (long long)pB * max(0, quanB - nB) + pS * max(0, quanS - nS) + pC * max(0, quanC - nC);
+	while(high - low > 1) {
+		long long mid = low + (high - low) / 2;
+		long long totCost = 0;
+		totCost += pB * (max(0LL, quanB * mid - nB));
+		totCost += pS * (max(0LL, quanS * mid - nS));
+		totCost += pC * (max(0LL, quanC * mid - nC));
+		if(totCost <= r) low = mid;
+		else high = mid;
 	}
-	long long cost = quanB * pB + quanC * pC + quanS * pS;
-	quan += r / cost;
 	
-	cout << quan << '\n';
+	cout << quan + low << '\n';
 	
 	return 0;
 }
