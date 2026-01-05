@@ -42,7 +42,7 @@ int main() {
 		a.pop_back();
 	}
 	
-	vector<int> sum(n+1, 0);
+	vector<long long> sum(n+1, 0);
 	for(int i = 1; i <= n; i++)
 		sum[i] = sum[i-1] + ret[i-1];
 	
