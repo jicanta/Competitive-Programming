@@ -19,19 +19,19 @@ int main() {
 		cin >> a[i];
 	sort(begin(a), end(a));
 	
-	vector<pair<int, int>> b(n+1);
+	vector<pair<int, int>> b(n);
 	vector<pair<int, int>> queries(q);
-	for(int i = 0; i <= n; i++)
+	for(int i = 0; i < n; i++)
 		b[i] = {0, i};
 	for(int i = 0; i < q; i++) {
 		int l, r;
 		cin >> l >> r;
 		l--;
 		b[l].first++;
-		b[r].first--;
+		if(r < n) b[r].first--;
 		queries[i] = {l+1, r};
 	}
-	for(int i = 1; i <= n; i++)
+	for(int i = 1; i < n; i++)
 		b[i].first += b[i-1].first;
 		
 	vector<int> ret(n);
