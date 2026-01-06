@@ -15,22 +15,25 @@ int main() {
 
 	int n;
 	cin >> n;
-	vector<int> a(n);
-	for(int i = 0; i < n; i++)
-		cin >> a[i];
-	
-	sort(begin(a), end(a));
-	vector<int> b = a;
-	b.erase(unique(begin(b), end(b)), end(b));
-	if(b.size() < a.size()) {
-		cout << 0 << '\n';
-		return 0;
-	}
-	int diff = a[1] - a[0];
 	if(n == 1) {
 		cout << -1 << '\n';
 		return 0;
 	}
+	vector<int> a(n);
+	bool allSame = true;
+	for(int i = 0; i < n; i++)
+		cin >> a[i];
+	
+	sort(begin(a), end(a));
+	for(int i = 0; i < n - 1; i++)
+		allSame &= a[i] == a[i+1];
+	if(allSame) {
+		cout << 1 << '\n';
+		cout << a[0] << '\n';
+		return 0;
+	}
+	int diff = a[1] - a[0];
+	
 	if(n == 2) {
 		if(diff % 2 == 0) {
 			cout << 3 << '\n';
@@ -60,7 +63,7 @@ int main() {
 	bool can = false;
 	int idx;
 	for(int i = 0; i < n - 1; i++) {
-		if(f[a[i+1] - a[i]] == 1 && (a[i+1] - a[i]) % 2 == 0) {
+		if(a[i+1] != a[i] && f[a[i+1] - a[i]] == 1 && (a[i+1] - a[i]) % 2 == 0) {
 			can = true;
 			idx = i;
 			diff = a[i+1] - a[i];
