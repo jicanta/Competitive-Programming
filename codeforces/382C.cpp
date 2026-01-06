@@ -61,9 +61,12 @@ int main() {
 	}
 	
 	bool can = false;
+	int goalDiff = -1;
+	for(int i = 0; i < n - 1; i++) if(f[a[i + 1] - a[i]] > 1 || (a[i+1] - a[i]) % 2 == 1)
+		goalDiff = a[i+1] - a[i];
 	int idx;
 	for(int i = 0; i < n - 1; i++) {
-		if(a[i+1] != a[i] && f[a[i+1] - a[i]] == 1 && (a[i+1] - a[i]) % 2 == 0) {
+		if(a[i+1] != a[i] && f[a[i+1] - a[i]] == 1 && (a[i+1] - a[i]) % 2 == 0 && goalDiff == (a[i+1] - a[i]) / 2) {
 			can = true;
 			idx = i;
 			diff = a[i+1] - a[i];
