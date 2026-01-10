@@ -28,19 +28,19 @@ int main() {
     vector<int> a(n), b(m);
     for(int i = 0; i < n; i++)
 		cin >> a[i];
-	  for(int i = 0; i < m; i++)
-		  cin >> b[i];
+	for(int i = 0; i < m; i++)
+		cin >> b[i];
 	
-	  auto cost = [&](int maxi) {
-		  long long ret = 0;
-		  for(int i = 0; i < m; i++)
-			  ret += max(0, b[i] - maxi);
-		  for(int i = 0; i < n; i++)
-			  ret += max(0, maxi - a[i]);
-		  return ret;
+	auto cost = [&](int maxi) {
+		long long ret = 0;
+		for(int i = 0; i < m; i++)
+			ret += max(0, b[i] - maxi);
+		for(int i = 0; i < n; i++)
+			ret += max(0, maxi - a[i]);
+		return ret;
 	  };
 	
     int bestX = ternSearch(1, 1e9+1, cost);
-	  cout << cost(bestX) << '\n';
+	cout << cost(bestX) << '\n';
     return 0;
 }
