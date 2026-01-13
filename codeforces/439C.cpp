@@ -43,7 +43,10 @@ int main() {
 	for(int i = 0; i < (int)c[0].size(); i++)
 		group.back().push_back(c[0][i]);
     
-    assert((int)c[1].size() % 2 == 0);
+    if((int)c[1].size() % 2 == 1) {
+		cout << "NO\n";
+		return 0;
+	}
     for(int i = 0; i < (int)c[1].size(); i++) {
 		group.back().push_back(c[1][i]);
 	}
