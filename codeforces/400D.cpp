@@ -6,6 +6,21 @@ using namespace std;
 
 const int INF = 1e9;
 
+struct UF {
+	vector<int> e;
+	UF(int n) : e(n, -1) {}
+	int size(int x) { return -e[find(x)]; }
+	int find(int x) { return e[x] < 0 ? x : find(e[x]); }
+
+	bool join(int a, int b) {
+		a = find(a), b = find(b);
+		if(a == b) return false;
+		if(e[a] > e[b]) swap(a,b);
+		e[a] += e[b]; e[b] = a;
+		return true;
+	}
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -23,38 +38,40 @@ int main() {
 		type[i] = j;
 		--quan[j];
 	}
-	vector<vector<int>> dist(n, vector<int>(n, INF));
-	for(int i = 0; i < n; i++) dist[i][i] = 0;
+	vector<vector<int>> dist(k, vector<int>(k, INF));
+	UF uf(n);
+	for(int i = 0; i < k; ++i) dist[type[i]][type[i]] = 0;
     for(int i = 0; i < m; ++i) {
 		int u, v, w;
 		cin >> u >> v >> w;
 		--u, --v;
-		dist[u][v] = w;
-		dist[v][u] = w;
+		dist[type[u]][type[v]] = min(dist[type[u]][type[v]], w);
+		dist[type[v]][type[u]] = min(dist[type[v]][type[u]], w);
+		if(w == 0) uf.join(u, v);
 	}
 	
-	for(int k = 0; k < n; ++k) 
-		for(int i = 0; i < n; ++i)
-			for(int j = 0; j < n; ++j)
-				dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
-				
-	for(int i = 0; i < n; ++i)
-		for(int j = i+1; type[j] == type[i]; ++j)
-			if(dist[i][j] != 0) {
+	for(int i = 0; i < n; ++i) {
+		int j = i;
+		while(j < n && type[j] == type[i]) {
+			if(uf.find(i) != uf.find(j)) {
 				cout << "No\n";
 				return 0;
 			}
+			j++;
+		}
+	}
+	
+	for(int kk = 0; kk < k; ++kk) 
+		for(int i = 0; i < k; ++i)
+			for(int j = 0; j < k; ++j)
+				dist[i][j] = min(dist[i][j], dist[i][kk] + dist[kk][j]);
+				
 				
 	cout << "Yes\n";
-		
-	vector<vector<int>> ret(k, vector<int>(k, INF));
-	for(int i = 0; i < n; ++i) 
-		for(int j = 0; j < n; ++j)
-			ret[type[i]][type[j]] = min(ret[type[i]][type[j]], dist[i][j]);
 			
 	for(int i = 0; i < k; ++i) {
 		for(int j = 0; j < k; ++j)
-			cout << (ret[i][j] == INF ? -1 : ret[i][j]) << " \n"[j+1==k];
+			cout << (dist[i][j] == INF ? -1 : dist[i][j]) << " \n"[j+1==k];
 	}
 	
 	
