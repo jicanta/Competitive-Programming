@@ -39,7 +39,7 @@ int main() {
 				dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
 				
 	for(int i = 0; i < n; ++i)
-		for(int j = i+1; j < i+quan[type[i]]; ++j)
+		for(int j = i+1; type[j] == type[i]; ++j)
 			if(dist[i][j] != 0) {
 				cout << "No\n";
 				return 0;
