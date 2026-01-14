@@ -25,27 +25,27 @@ int main() {
 	}
 	vector<vector<int>> dist(n, vector<int>(n, INF));
 	for(int i = 0; i < n; i++) dist[i][i] = 0;
-    bool correct = false;
     for(int i = 0; i < m; ++i) {
 		int u, v, w;
 		cin >> u >> v >> w;
 		--u, --v;
-		correct |= (type[u] == type[v] && w == 0);
 		dist[u][v] = w;
 		dist[v][u] = w;
 	}
 	
-	if(not correct) {
-		cout << "No\n";
-		return 0;
-	}
-	
-	cout << "Yes\n";
-
 	for(int k = 0; k < n; ++k) 
 		for(int i = 0; i < n; ++i)
 			for(int j = 0; j < n; ++j)
 				dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
+				
+	for(int i = 0; i < n; ++i)
+		for(int j = i+1; j < i+quan[type[i]]; ++j)
+			if(dist[i][j] != 0) {
+				cout << "No\n";
+				return 0;
+			}
+				
+	cout << "Yes\n";
 		
 	vector<vector<int>> ret(k, vector<int>(k, INF));
 	for(int i = 0; i < n; ++i) 
