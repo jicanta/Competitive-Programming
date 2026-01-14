@@ -38,9 +38,15 @@ int main() {
 			}
 		}
 	};
+	dfs(r1, c1, -1, -1);
+	if(vis[r2][c2] && (r1 != r2 || c1 != c2) && tab[r2][c2] == 'X') {
+		cout << "YES\n";
+		return 0;
+	}
 	for(int k = 0; k < 4; k++) {
-		int nx = r2 + dx[k], ny = c2 + dx[k];
+		int nx = r2 + dx[k], ny = c2 + dy[k];
 		if(0 <= nx && nx < n && 0 <= ny && ny < m && tab[nx][ny] == '.') {
+			cout << "PEPE " << nx << ' ' << ny << '\n';
 			for(int i = 0; i < n; i++)
 				for(int j = 0; j < m; j++)
 					vis[i][j] = false;
