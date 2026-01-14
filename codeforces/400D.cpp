@@ -59,6 +59,7 @@ int main() {
 			}
 			j++;
 		}
+		i = j-1;
 	}
 	
 	for(int kk = 0; kk < k; ++kk) 
