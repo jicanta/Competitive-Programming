@@ -40,7 +40,7 @@ int main() {
 	}
 	vector<vector<int>> dist(k, vector<int>(k, INF));
 	UF uf(n);
-	for(int i = 0; i < k; ++i) dist[type[i]][type[i]] = 0;
+	for(int i = 0; i < k; ++i) dist[i][i] = 0;
     for(int i = 0; i < m; ++i) {
 		int u, v, w;
 		cin >> u >> v >> w;
