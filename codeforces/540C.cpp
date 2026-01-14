@@ -46,7 +46,6 @@ int main() {
 	for(int k = 0; k < 4; k++) {
 		int nx = r2 + dx[k], ny = c2 + dy[k];
 		if(0 <= nx && nx < n && 0 <= ny && ny < m && tab[nx][ny] == '.') {
-			cout << "PEPE " << nx << ' ' << ny << '\n';
 			for(int i = 0; i < n; i++)
 				for(int j = 0; j < m; j++)
 					vis[i][j] = false;
