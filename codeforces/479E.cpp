@@ -24,8 +24,8 @@ int main() {
 		vector<long long> newDp(n+1, 0);
 		for(int j = 0; j < n; ++j) if(j != b) {
 			int d = abs(j-b);
-			newDp[max(0, j-d+1)] += dp[j];
-			newDp[min(n, j+d)] -= dp[j];
+			newDp[max(0, j-d+1)] = (newDp[max(0, j-d+1)] % MOD + dp[j] % MOD) % MOD;
+			newDp[min(n, j+d)] = ((newDp[min(n, j+d)] % MOD - dp[j] % MOD) +  MOD) % MOD;
 		}
 		
 		for(int j = 1; j < n; ++j) 
